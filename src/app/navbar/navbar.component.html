@@ -1,0 +1,63 @@
+<mat-toolbar class="head-nav">
+  <button
+    mat-icon-button
+    class="header=nav"
+    aria-label="Heading Navbar"
+    (click)="drawer.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span><h3 style="color: rgb(26, 73, 79)">Pseudo Point</h3></span>
+</mat-toolbar>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div class="accordin-action-buttons">
+      <button
+        mat-raised-button
+        class="accordin-button"
+        (click)="accordion.openAll()"
+      >
+        Expand All
+      </button>
+      <button
+        mat-raised-button
+        class="accordin-button"
+        (click)="accordion.closeAll()"
+      >
+        Collapse All
+      </button>
+    </div>
+    <mat-accordion class="headers-align" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> API 1 </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list><button mat-button>GET Request</button></mat-list>
+        <mat-list><button mat-button>POST Request</button></mat-list>
+        <mat-list><button mat-button>PUT Request</button></mat-list>
+        <mat-list><button mat-button>DELETE Request</button></mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> API 2 </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list><button mat-button>GET Request</button></mat-list>
+        <mat-list><button mat-button>POST Request</button></mat-list>
+        <mat-list><button mat-button>PUT Request</button></mat-list>
+        <mat-list><button mat-button>DELETE Request</button></mat-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> API 1 </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list><button mat-button>GET Request</button></mat-list>
+        <mat-list><button mat-button>POST Request</button></mat-list>
+        <mat-list><button mat-button>PUT Request</button></mat-list>
+        <mat-list><button mat-button>DELETE Request</button></mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-drawer>
+
+</mat-drawer-container>
+
+
